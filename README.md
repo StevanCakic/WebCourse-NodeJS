@@ -1,2 +1,2 @@
 # NodeJS-Course
-Preparation for NodeJS course
+NodeJS course
