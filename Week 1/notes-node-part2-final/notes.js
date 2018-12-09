@@ -19,7 +19,7 @@ function saveNotes(notes) {
 // Kako da setujemo default vrijednosti parametara
 function addNote(title, body) {
     let notes = []; // after refactoring
-                    // mozemo da pozovemo fetchNotes funkciju i obrisemo try/catch dio!
+    // mozemo da pozovemo fetchNotes funkciju i obrisemo try/catch dio!
     const note = {
         title,
         body

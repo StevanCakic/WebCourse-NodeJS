@@ -1,10 +1,10 @@
 console.log("Starting notes.js")
 
-function addNote(title, body){
+function addNote(title, body) {
     console.log("Adding note", title, body);
 }
 
-function getAll(){
+function getAll() {
     console.log("Get all notes");
 }
 
@@ -25,6 +25,6 @@ module.exports.add = () => {
 module.exports = {
     addNote,
     getAll,
-    getNote, 
+    getNote,
     removeNote
 }
