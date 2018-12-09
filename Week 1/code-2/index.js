@@ -1,4 +1,4 @@
-// Kreiranje servera
+// Kreiranje servera, samo uvod
 
 const http = require('http');
 
