@@ -52,7 +52,11 @@ function getAll() {
 }
 
 function getNote(title) {
-    console.log("Get note", title);
+    let notes = fetchNotes();
+    const filteredNotes = notes.filter(note => {
+        return note.title === title;
+    });
+    return filteredNotes[0];
 }
 
 function removeNote(title) {
@@ -61,6 +65,12 @@ function removeNote(title) {
     saveNotes(filteredNotes);
 
     return filteredNotes < notes;
+}
+
+function logNote(note) {
+    console.log("-----");
+    console.log(`Title: ${note.title}`);
+    console.log(`Body: ${note.body}`);
 }
 
 // Testing purpose
@@ -73,5 +83,6 @@ module.exports = {
     addNote,
     getAll,
     getNote,
-    removeNote
+    removeNote,
+    logNote
 }
