@@ -1,7 +1,7 @@
 console.log("Starting app.js");
 
 // Dio prvi - Built-in moduli 
-
+/*
 const fs = require("fs");
 const os = require("os");
 
@@ -12,7 +12,7 @@ fs.appendFile("greetings.txt", `Hello ${user.username}!`, err => {
         console.log("Unable to write to file");
     }
 });
-
+*/
 // Dio drugi - Nasi moduli
 
 /*
@@ -24,9 +24,9 @@ console.log(notes.append("abc", "efg"));
 */
 
 // Dio treci - 3rd party moduli
-
+/*
 const _ = require("lodash");
 console.log(_.isString(true))
 console.log(_.isString("abc"));
 const arrayOfUniqElements = _.uniq([1, 2, 3, 1, 2, "A", "B", "A", true, true, false]);
-console.log(arrayOfUniqElements);
+console.log(arrayOfUniqElements);*/
