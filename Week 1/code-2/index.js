@@ -1,12 +1,13 @@
 // Kreiranje servera, samo uvod
 
+/*
 const http = require('http');
 
 http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/html'});
+    res.writeHead(400, {'Content-Type': 'text/html'});
     res.end('Hello World!');
 }).listen(8080);
-
+*/
 // Importovanje modula iz root foldera
 
 const my_module = require("./my_module");

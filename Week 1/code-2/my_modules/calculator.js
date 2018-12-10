@@ -16,8 +16,8 @@ function div(a, b) {
 
 /* Kako ovo da se unaprijedi sa ES6? */
 module.exports = {
-    add: add,
-    sub: sub,
-    mult: mult,
-    div: div
+    add,
+    sub,
+    mult,
+    div
 }
