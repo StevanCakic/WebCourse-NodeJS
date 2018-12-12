@@ -71,12 +71,6 @@ function logNote(note) {
     console.log(`Body: ${note.body}`);
 }
 
-// Testing purpose
-module.exports.add = () => {
-    console.log("addNote");
-    return "New Note";
-}
-
 module.exports = {
     addNote,
     getAll,
