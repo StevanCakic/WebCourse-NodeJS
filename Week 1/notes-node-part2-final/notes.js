@@ -23,13 +23,7 @@ function addNote(title, body) {
         body
     };
 
-    // sta ako nema fajla notes-data.json
-    try {
-        const notesString = fs.readFileSync("notes-data.json");
-        notes = JSON.parse(notesString);
-    } catch (e) {
-
-    }
+    notes = fetchNotes();
 
     // kraci zapis ?
     // title mora da bude unique
@@ -39,8 +33,7 @@ function addNote(title, body) {
 
     if (duplicateNotes.length === 0) {
         notes.push(note);
-        fs.writeFileSync("notes-data.json", JSON.stringify(notes)); // ovo mozemo ukloniti nakon refacotringa
-        // saveNotes(notes); //after refactoring
+        saveNotes(notes); //after refactoring
         return note
     }
 }
