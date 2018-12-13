@@ -34,7 +34,6 @@ function geocodeAddress(address, cb) {
             console.log(`Latitude: ${body.results[0].geometry.location.lat}`);
             console.log(`Longitude: ${body.results[0].geometry.location.lng}`);*/
         }
-
     })
 }
 
