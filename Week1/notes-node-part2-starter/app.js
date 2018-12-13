@@ -7,10 +7,14 @@ const yargs = require("yargs");
 
 const notes = require("./notes");
 
+// console.log(yargs.argv);
+
 const argv = yargs.argv;
 const command = argv._[0];
 
 console.log("Command: ", command);
+
+console.log(argv);
 
 if (command === "add") {
     notes.addNote(argv.title, argv.body);
