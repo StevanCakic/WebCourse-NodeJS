@@ -6,7 +6,16 @@ function square(x) {
   return x * x;
 }
 
+function setName(fullName) {
+    const user = {}
+    const names = fullName.split(" ");
+    user.firstName = names[0];
+    user.lastName = names[1];
+    return user;
+}
+
 module.exports = {
   add,
-  square
+  square,
+  setName
 };
