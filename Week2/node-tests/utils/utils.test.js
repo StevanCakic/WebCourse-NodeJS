@@ -55,3 +55,11 @@ it("Should set firstName and lastName", () => {
     lastName: "Prezime"
   });
 });
+
+it("Should async add two numbers", (done) => {
+  utils.asyncAdd(4, 3, (sum) => {
+    expect(sum).toBe(7);
+    expect(typeof sum).toBe("number");
+    done();
+  })
+})
