@@ -1,8 +1,3 @@
-Week1/*/node_modules
-Week1/*/package-lock.json
-Week2/*/package-lock.json
-Week2/*/node_modules
-Week2/*/server.log
-Week3/*/node_modules
-Week3/*/package-lock.json
+node_modules
+package-lock.json
 .DS_Store
