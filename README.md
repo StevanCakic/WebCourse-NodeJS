@@ -13,4 +13,4 @@ NodeJS course
 - Class 5 - Testing, introduction <br/>
 
 **Week 4** <br/>
-- Class 6 - Testing (part 2), MongoDB, Creating simple API <br/>
+- Class 6 - Testing (part 2), MongoDB, Creating simple API (node-todo-api) <br/>
