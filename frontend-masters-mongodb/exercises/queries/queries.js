@@ -1,38 +1,39 @@
 const Post = require('./post')
 
 const postByTitle = (title) => {
-  return Post.findOne({title}).exec()
+  // return Post.findOne({title}).exec()
 }
 
 const postsForAuthor = (authorId) => {
-  return Post.find({author: authorId}).exec()
+  // return Post.find({author: authorId}).exec()
 }
 
 const fullPostById = (id) => {
-  return Post.findById(id)
+  /*return Post.findById(id)
     .populate('author')
     .populate('similarPosts')
-    .exec()
+    .exec()*/
 }
 
 const allPostsSlim = (fieldsToSelect) => {
-  return Post.find({})
-    .select(fieldsToSelect)
+  /*return Post.find({})
+    .select(fieldsToSelect) // jedna od funkcionalnosti GraphQLa
     .sort('-createdAt')
-    .exec()
+    .exec()*/
 }
 
 const postByContentLength = (maxContentLength, minContentLength) => {
-  return Post.find({
+  /*return Post.find({
     contentLength: {$lt: maxContentLength, $gt: minContentLength}
   })
-    .exec()
+    .exec()*/
 }
 
 const addSimilarPosts = (postId, similarPosts) => {
-  return Post.findByIdAndUpdate(postId, {
-    $push: {similarPosts: {$each: similarPosts}}
-  },{new: true})
+  /*return Post.findByIdAndUpdate(postId, {
+    $push: {similarPosts: {$each: similarPosts}} // ovdje radimo each da ne bismo pregazili 
+    // simularPosts, nego samo da dodamo nove simular postove !
+  },{new: true})*/
 }
 
 module.exports = {
