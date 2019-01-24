@@ -14,3 +14,4 @@ NodeJS course
 
 **Week 4** <br/>
 - Class 6 - Testing (part 2), MongoDB, Creating simple API (node-todo-api) <br/>
+- Class 7 - Mongoose - Schema, Model, Hooks (Middlewares), Indexes, Virtuals   
