@@ -3,7 +3,7 @@ const Org = require('../org')
 const mongoose = require('mongoose')
 
 describe('Org model', () => {
-  test('removes projects when org is remove', async () => {
+  test('removes projects when org is removed', async () => {
     const org = await Org.create({name: 'org'})
     await Project.create([
       {name: 'project1', org: org.id},

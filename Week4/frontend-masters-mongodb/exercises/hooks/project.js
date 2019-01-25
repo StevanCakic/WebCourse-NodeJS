@@ -25,13 +25,15 @@ const projectSchema = new mongoose.Schema({
   }
 })
 
+/*
 projectSchema.index({
   org: 1,
   name: 1
-}, {unique: true})
+}, {unique: true})*/
 
-
+/*
 projectSchema.virtual('budgetLeft').get(function() {
   return this.budget - this.spent
-})
+})*/
+
 module.exports = mongoose.model('project', projectSchema)
