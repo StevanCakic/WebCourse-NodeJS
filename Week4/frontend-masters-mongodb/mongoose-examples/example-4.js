@@ -22,8 +22,22 @@ app.use(urlencoded({extended: true}));
 app.use(json());
 
 app.get("/note", async(req, res) => {
-    const notes = await Note.find({}).exec();
+    const notes = await Note.find({})
+        .sort() // po necemu
+        .skip(10) // paganacija, 
+        // npr preskocima broj strane na kojoj smo trenutno * broj item-a na strani
+        // napomena: broja strane na kojoj se nalazi korisnik ocekujemo da dobijemo 
+        // od frontend-a
+        .limit(10) // ako je broj item-a po strani 10
+        .lean() // pretvara mongoose objekat u JSON objekat
+        .exec();
     res.status(200).json(notes);
+})
+
+app.post("/note", async(req, res) => {
+    const noteToBeCreated = req.body;
+    const note = await Note.create(noteToBeCreated);
+    res.status(201).json(note.toJSON());
 })
 
 const connect = () => {
@@ -31,5 +45,7 @@ const connect = () => {
 };
 
 connect()
-  .then(async connection => {})
+  .then(async connection => {
+      app.listen(5000);
+  })
   .catch(e => console.error(e));
