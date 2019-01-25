@@ -23,7 +23,7 @@ app.use(json());
 
 app.get("/note", async(req, res) => {
     const notes = await Note.find({})
-        .sort() // po necemu
+        .sort() // po necemu jer ne mozemo random da izvlacimo podatke, sort po nekom indeksu
         .skip(10) // paganacija, 
         // npr preskocima broj strane na kojoj smo trenutno * broj item-a na strani
         // napomena: broja strane na kojoj se nalazi korisnik ocekujemo da dobijemo 
